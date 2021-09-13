@@ -1,0 +1,157 @@
+:root {
+    --lightPink: rgb(168, 117, 224);
+    --white: rgb(255, 238, 255);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: sans-serif;
+    background: rgb(237, 242, 248);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 80%;
+    margin: 50px auto;
+}
+/* main */
+.main {
+    flex: 3;
+}
+.firstRow,
+.secondRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 35px;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+h3 {
+    padding: 20px 0;
+}
+h5,
+p {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 40px;
+}
+.quotation {
+    position: relative;
+    z-index: 1;
+}
+.quotation img {
+    position: absolute;
+    top: -35px;
+    right: 10%;
+    margin-right: 0px;
+    border-radius: 0%;
+    width: 35%;
+    max-width: 120px;
+    z-index: 2;
+}
+/* Daniel Clifford */
+.firstRow article:first-child {
+    background-color: rgb(115, 63, 200);
+}
+.firstRow article:first-child .imgDaniel {
+    border: 4px solid var(--lightPink);
+}
+.firstRow article:first-child h4, 
+.firstRow article:first-child h3 {
+    color: var(--white);
+    position: relative;
+    z-index: 92;
+}
+.firstRow article:first-child h5,
+.firstRow article:first-child p {
+    color: var(--lightPink);
+    position: relative;
+    z-index: 92;
+}
+/* Jonathan Walters */
+.firstRow article:last-child {
+    background-color: rgb(73, 85, 107);
+}
+.firstRow article:last-child h4, 
+.firstRow article:last-child h3 {
+    color: var(--white);
+}
+.firstRow article:last-child h5,
+.firstRow article:last-child p {
+    color: rgb(168, 177, 194);
+}
+/* Jeanette Harmon */
+.secondRow article:first-child {
+    background: white;
+}
+.secondRow article:first-child h5,
+.secondRow article:first-child p {
+    color: gray;
+}
+/* Patrick Abrams */
+.secondRow article:last-child {
+    flex: 2;
+    background: rgb(24, 32, 45);
+}
+.secondRow article:last-child h4,
+.secondRow article:last-child h3 {
+    color: var(--white);
+} 
+.secondRow article:last-child h5,
+.secondRow article:last-child p {
+    color: rgb(168, 177, 194);
+}
+.secondRow article:last-child img {
+    border: 4px solid var(--lightPink);
+}
+/* aside */
+.aside {
+    flex:1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 35px;
+}
+.aside h5,
+.aside p {
+    color: rgb(168, 177, 194);
+}
+
+/* responive */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    .main,
+    .aside,
+    article {
+        flex: 1 1 100%;
+    }
+    img {
+        margin-right: 10px;
+    }
+    .quotation img {
+        right: 0;
+        margin-right: -10px;
+        opacity: .6;
+        width: 75%;
+    }
+}
